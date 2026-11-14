@@ -1,0 +1,35 @@
+export const AUDIT_ACTION_LABELS: Record<string, string> = {
+  INSCRIPTION_REUSSIE: "Inscription réussie",
+  INSCRIPTION_ECHEC: "Échec d’inscription",
+  CONNEXION_REUSSIE: "Connexion réussie",
+  CONNEXION_ECHEC: "Échec de connexion",
+  CONNEXION_REFUSEE: "Connexion refusée",
+  VOTE_ENREGISTRE: "Vote enregistré",
+  ETUDIANT_AJOUTE: "Matricule ajouté",
+  ETUDIANT_MODIFIE: "Matricule modifié",
+  ETUDIANT_REACTIVE: "Matricule réactivé",
+  ETUDIANT_DESACTIVE: "Matricule désactivé",
+  RECLAMATION_REINITIALISEE: "Réclamation réinitialisée",
+  IMPORT_MATRICULES: "Import de matricules",
+  ELECTION_CREEE: "Élection créée",
+  ELECTION_MODIFIEE: "Élection modifiée",
+  ELECTION_OUVERTE: "Vote ouvert",
+  ELECTION_CLOTUREE: "Vote clôturé",
+  ELECTION_PUBLIEE: "Résultats publiés",
+  ELECTION_STATUT_MODIFIE: "Statut d’élection modifié",
+  CANDIDAT_AJOUTE: "Candidat ajouté",
+  CANDIDAT_MODIFIE: "Candidat modifié",
+  CANDIDAT_SUPPRIME: "Candidat supprimé",
+  CANDIDATS_REORDONNES: "Candidats réordonnés",
+  COMPTE_APPROUVE: "Compte approuvé",
+  COMPTE_REJETE: "Compte rejeté",
+  PARAMETRE_MODIFIE: "Paramètre modifié",
+  TRESORERIE_RECETTE_AJOUTEE: "Recette ajoutée",
+  TRESORERIE_DEPENSE_AJOUTEE: "Dépense ajoutée",
+  TRESORERIE_OPERATION_MODIFIEE: "Opération de trésorerie modifiée",
+  TRESORERIE_OPERATION_SUPPRIMEE: "Opération de trésorerie supprimée",
+};
+
+export function auditActionLabel(action: string) {
+  return AUDIT_ACTION_LABELS[action] ?? action.replaceAll("_", " ").toLowerCase();
+}
